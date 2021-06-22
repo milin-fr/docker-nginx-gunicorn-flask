@@ -1,0 +1,3 @@
+flask/virtual_env
+flask/__pycache__
+.env
