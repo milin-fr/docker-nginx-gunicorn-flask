@@ -8,6 +8,8 @@ services:
             - .env
         container_name: flask_container_name_displayed_in_flask_app
         restart: always
+        depends_on:
+            - redis_container
         expose:
             - 8080
 
@@ -19,3 +21,6 @@ services:
             - "80:80"
         depends_on:
             - my_flask_container
+
+    redis_container:
+        image: redis
